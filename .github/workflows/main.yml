@@ -40,9 +40,12 @@ jobs:
     - name: Run docker
       run: docker run -d hello-docker
 
-    # Check cgroup
-    - name: Check cgroup
+    # Check cgroup actions_job
+    - name: Check cgroup actions_job
       run: ls -l /sys/fs/cgroup/memory/actions_job
+
+    # Check cgroup actions_job
+    - name: Check cgroup user.slice
       run: ls -l /sys/fs/cgroup/memory/user.slice
 
     # Check cgroup via script
