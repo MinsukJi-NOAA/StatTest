@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ls /sys/fs/cgroup/memory >list.txt
+ls -l /sys/fs/cgroup/memory >list.txt
