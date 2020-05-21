@@ -39,3 +39,8 @@ jobs:
     # Check cgroup via script
     - name: Check cgroup via script
       run: ./myscript.sh
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: my-artifact
+        path: list.txt
