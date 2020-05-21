@@ -42,13 +42,13 @@ jobs:
 
     # Check cgroup
     - name: Check cgroup
-      run: ls -l /sys/fs/cgroup/memory
+      run: ls -l /sys/fs/cgroup/memory/actions_job
+      run: ls -l /sys/fs/cgroup/memory/user.slice
 
     # Check cgroup via script
     - name: Check cgroup via script
       run: ./myscript.sh
 
-    - uses: actions/upload-artifact@v2
-      with:
-        name: my-artifact
-        path: list.txt
+    # Print out docker log
+    - name: Print out docker log
+      run: docker logs -f $(docker ps -q --no-trunc)
