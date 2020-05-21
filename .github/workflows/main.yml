@@ -32,6 +32,14 @@ jobs:
         echo Add other actions to build,
         echo test, and deploy your project.
         
+    # Build docker
+    - name: Build docker
+      run: docker build --no-cache -t hello-docker
+
+    # Run docker
+    - name: Run docker
+      run: docker run -d hello-docker
+
     # Check cgroup
     - name: Check cgroup
       run: ls /sys/fs/cgroup/memory
