@@ -34,7 +34,7 @@ jobs:
         
     # Build docker
     - name: Build docker
-      run: docker build --no-cache -t hello-docker
+      run: docker build --no-cache -t hello-docker .
 
     # Run docker
     - name: Run docker
