@@ -42,11 +42,7 @@ jobs:
 
     # Check cgroup actions_job
     - name: Check cgroup actions_job
-      run: ls -l /sys/fs/cgroup/memory/actions_job
-
-    # Check cgroup actions_job
-    - name: Check cgroup user.slice
-      run: ls -l /sys/fs/cgroup/memory/user.slice
+      run: cat /sys/fs/cgroup/memory/actions_job/$(docker ps -q --no-trunc)/memory.stat
 
     # Check cgroup via script
     - name: Check cgroup via script
