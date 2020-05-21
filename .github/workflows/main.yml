@@ -35,3 +35,7 @@ jobs:
     # Check cgroup
     - name: Check cgroup
       run: ls /sys/fs/cgroup/memory
+
+    # Check cgroup via script
+    - name: Check cgroup via script
+      run: ./myscript.sh
